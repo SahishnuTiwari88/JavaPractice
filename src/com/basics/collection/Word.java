@@ -1,0 +1,32 @@
+package com.basics.collection;
+
+class Solu {
+    public String mergeAlternately(String word1, String word2) {
+        int i=0,j=0;
+        StringBuilder sb = new StringBuilder();
+        //String str = "";
+        while(i<word1.length() || j<word2.length()){
+        if(i<word1.length()){
+           sb.append(word1.charAt(i));
+            i++;
+            
+        }if(j< word2.length()){
+           sb.append(word2.charAt(j));
+           
+            j++;
+        }
+        }
+        return sb.toString();
+    }
+    
+}
+
+public class Word{
+	public static void main(String args[]) {
+		Solu sol = new Solu();
+		String mergeAlternately = sol.mergeAlternately("ab", "pqr");
+		System.out.println(mergeAlternately);
+		
+
+	}
+}
