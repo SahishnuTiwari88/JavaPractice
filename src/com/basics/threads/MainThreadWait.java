@@ -1,4 +1,4 @@
-package com.basics;
+package com.basics.threads;
 
 public class MainThreadWait {
 
@@ -20,12 +20,18 @@ class SarvThread extends Thread{
 	static Thread mt;
 	public void run() {
 		try {
-			mt.join(1000); // child thread wait till main thread executed completely
+			mt.join(1000); // child thread wait till 1sec for main thread executed completely
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		for(int i = 0;i<5;i++) {
 			System.out.println("Child Thread");
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 	}
