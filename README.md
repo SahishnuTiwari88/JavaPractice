@@ -71,7 +71,8 @@ Contributions and suggestions are welcome! Please create a pull request or open 
 📫 Contact
 
 Created and maintained by Sahishnu Tiwari.
-GitHub Profile
+Connect with me on
+[SahishnuTiwari88](https://github.com/SahishnuTiwari88) for any questions or collaborations.
 
 
 ---
