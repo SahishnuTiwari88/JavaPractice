@@ -36,3 +36,5 @@ public class ArrayProd {
 	}
 
 }
+
+//product of array program
