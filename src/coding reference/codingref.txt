@@ -1,0 +1,89 @@
+CODE BACKUP and STEP BY STEP CHANGES : For Coding Reference and Debugging
+I'm really delighted to have the privilege of being your instructor for this course! I welcome you to another awesome section!
+
+👉 Bookmark the GitHub folder for this section
+https://github.com/in28minutes/java-a-course-for-beginners/tree/master/51-learn-spring-framework
+
+👉 Help for Debugging Problems
+* Here's the code backup at the end of step 05: https://github.com/in28minutes/java-a-course-for-beginners/blob/master/51-learn-spring-framework/01-Step05.md
+* Step by Step changes are detailed here: https://github.com/in28minutes/java-a-course-for-beginners/blob/master/51-learn-spring-framework/step-by-step-code-changes/step-by-step-guide.md
+
+CODE BACKUP and STEP BY STEP CHANGES : For Coding Reference and Debugging
+I'm really delighted to have the privilege of being your instructor for this course! I welcome you to another awesome section!
+
+👉 Bookmark the GitHub folder for this section
+https://github.com/in28minutes/java-a-course-for-beginners/tree/master/51-learn-spring-framework
+
+👉 Help for Debugging Problems
+* Here's the code backup at the end of step 05: https://github.com/in28minutes/java-a-course-for-beginners/blob/master/51-learn-spring-framework/01-Step05.md
+* Step by Step changes are detailed here: https://github.com/in28minutes/java-a-course-for-beginners/blob/master/51-learn-spring-framework/step-by-step-code-changes/step-by-step-guide.md
+
+
+CODE BACKUP and STEP BY STEP CHANGES : For Coding Reference and Debugging
+I'm really delighted to have the privilege of being your instructor for this course! I welcome you to another awesome section!
+
+👉 Bookmark the GitHub folder for this section  (SAME FOLDER AS PREVIOUS SECTION)
+https://github.com/in28minutes/java-a-course-for-beginners/tree/master/51-learn-spring-framework
+
+👉 Help for Debugging Problems
+* Here's the code backup at the end of step 04: https://github.com/in28minutes/java-a-course-for-beginners/blob/master/51-learn-spring-framework/02-Step04.md
+* Step by Step changes are detailed here: https://github.com/in28minutes/java-a-course-for-beginners/blob/master/51-learn-spring-framework/step-by-step-code-changes/step-by-step-guide.md#section-02
+
+CODE BACKUP and STEP BY STEP CHANGES : For Coding Reference and Debugging
+I'm really delighted to have the privilege of being your instructor for this course! I welcome you to another awesome section!
+
+👉 Bookmark the GitHub folder for this section  (SAME FOLDER AS PREVIOUS SECTION)
+https://github.com/in28minutes/java-a-course-for-beginners/tree/master/51-learn-spring-framework
+
+👉 Help for Debugging Problems
+* Here's the code backup at the end of step 03: https://github.com/in28minutes/java-a-course-for-beginners/blob/master/51-learn-spring-framework/03-Step03.md
+* Step by Step changes are detailed here: https://github.com/in28minutes/java-a-course-for-beginners/blob/master/51-learn-spring-framework/step-by-step-code-changes/step-by-step-guide.md#section-03
+
+REST-API
+
+If you face any problems in the subsequent steps, you can compare your code vs the code from the course.
+Here's the Github pages with the complete code: https://github.com/in28minutes/java-a-course-for-beginners/blob/master/52-learn-spring-boot/1.md
+
+If we want to test rest-API for post mapping we can use  Talend API Tester(google it).
+
+Reference : Code at the end of the section
+If you face any problems in the subsequent steps, you can compare your code vs the code from the course.
+Here's the Github pages with the complete code: https://github.com/in28minutes/java-a-course-for-beginners/blob/master/52-learn-spring-boot/2.md
+
+
+
+Bonus Lecture
+10-IN-1 COURSE
+[NEW] Master Spring Boot 3 & Spring Framework 6 with Java - Become Java Spring Boot Full Stack Cloud Developer. Learn AWS, React, Docker, Spring Data JPA & Spring Security.
+Do you want to become a Java Spring Boot Full Stack React & Cloud Developer?
+This is the ONLY COURSE you need!
+￼￼￼￼
+￼
+￼
+
+[NEW] Master Spring Boot 3 & Spring Framework 6 with Java - Become Java Spring Boot Full Stack Cloud Developer. Learn AWS, React, Docker, Spring Data JPA & Spring Security.
+
+WHAT LEARNERS ARE SAYING
+5 STARS - Nice course, helped me understand spring from basics.
+5 STARS - Absolute Amazing course. Ranga's way of teaching is quite unique and the course covers topics ranging from beginner level to advance level.
+5 STARS - Fantastic course. It is helping me to advance in my career. Explained each and everything in very simple language.
+5 STARS - Best course ever
+5 STARS - The best Spring Boot Security Course ever!
+5 STARS - Excellent!
+
+
+
+Notes for Java and Eclipse Troubleshooting
+ Default Home Folder for JDK
+* Windows: C:\Program Files\Java\jdk-{version}
+    * Example for JDK 16 - C:\Program Files\Java\jdk-16
+    * Example for JDK 17 - C:\Program Files\Java\jdk-17
+* Mac: /Library/Java/JavaVirtualMachines/jdk-{version}.jdk/Contents/Home
+    * Example for JDK 16 - /Library/Java/JavaVirtualMachines/jdk-16.jdk/Contents/Home
+    * Example for JDK 17 - /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
+Default Home Folder for JDK
+* Windows: C:\Program Files\Java\jdk-{version}\bin
+    * Example for JDK 16 - C:\Program Files\Java\jdk-16\bin
+* Mac: /Library/Java/JavaVirtualMachines/jdk-{version}.jdk/Contents/Home/bin
+    * Example for JDK 16 - /Library/Java/JavaVirtualMachines/jdk-16.jdk/Contents/Home/bin
+

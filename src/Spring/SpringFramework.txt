@@ -1,0 +1,155 @@
+Spring Framework : 
+Group ID : Similar to package name Artefact ID : Similar to class name
+
+Coupling : Coupling is a measure of how much work is involved in changing something.
+
+Loose Coupling : 
+
+Record : when you're making use of a record, you don't really need to create a setter, getter, constructor, or a lot of things. They're all automatically created for us.
+
+Spring container or Spring context or IOC container all are same - responsible for managing spring beans and its lifecycle.
+There are two ways of IOC container-
+1. Bean factory- basic spring container 
+2. Application Context - Advanced spring container with enterprise specific features
+    A. Easy to use in web application 
+    B. Easy internationalisation
+    C. Easy integration with spring AOP
+
+Java Bean VS POJO VS Spring Bean —>
+
+POJO : A POJO stands for "plain old Java object." Any Java object is a POJO, as simple as that. Almost every Bean that we have created in the course until now is a POJO, a plain old Java object.
+
+
+Java Bean : It is little complex because of the EJB (Enterprise Java Beans), it was used 15 years ago. It has some restrictions as- 
+1. One is that it should have a no argument constructor.
+2. It should have getters and setters
+3. It should implements Serializable interface
+
+Spring Bean : Any Java object that is managed by Spring, Spring uses IOC container(Bean Factory or Application context) to manage these objects.
+
+LIST ALL BEANS MANAGED BY SPRING FRAMEWORK —> 
+We can get names of all the beans using context.getBeanDefinationNames or by using getBeanDefinationCount().
+context.getBeanDefinationNames return an array which can be looped using functional programming.
+
+
+@Primary : A bean should be given preference if multiple qualified beans are there.(only @Autiwired)
+Ex : suppose if we have 10 beans, then the one with @Primary annotation will be given preference
+
+@Qualifier : A specific bean should be autowired( qualifier name can be bean name starting with small case if name is not given) (@Autiwired +@Qualifier())
+
+While using @Primary or @Qualifier always think from perspective of the class
+@Autowired : give preference to the preferred class or algorithm
+@Autowired + @Qualifier : if want to use any specific algorithm 
+
+NOTE: Qualifier has higher priority than Primary
+
+
+TYPES OF DEPENDENCY INJECTIONS :
+Constructor based, setter based, field based
+
+1. Field Based : using @Autowired on fields itself like @Autowired	Person1 person1;
+2. Setter based : using @Autowired on setter
+3. Constructor based : using @Autowired on constructor, it is not necessary to add @Autowired on the constructor
+
+@Lazy : this annotation is used for lazy initialisation of the object/bean, i.e. initialised or used only when call.
+It can be used on any class which is annotated with @Component or any method annotated with @Bean
+Default initialisation for spring bean is Eager.
+
+STATEFUL BEAN : If bean contains user information then it cannot be used across entire application,  you need to create separate beans for each of the users, that's when you would create prototype beans.
+
+STATELESS BEAN : If bean is generic and doesn’t holds user information  and they can use across the application, then you can just create one instance of it and use it across the application then you create singleton bean.
+
+PostConstruct : If you want to execute some initialization logic as soon as the dependencies are wired in, for example, fetch some data from the database or things like that, that's where you can use the PostConstruct.
+
+PreDestroy : It is performed just before bean is getting released
+
+
+NOTE : Now one of the important things to do, is to make use of CDI(Context and Dependency Injection Annotations), we need to add a Dependency to our POM.xml. So, I'll go into my POM.xml and add a very, very simple Dependency. So, let's go beneath spring-boot-starter and let's add this Dependency in. So, we are adding a Dependency with groupId jakarta.inject,
+artifactId jakarta.inject-api and version is 2.0.1.
+
+@Component —> @Named
+@Autowired —> @Inject
+
+NOTE : Spring Singleton: One object instance per Spring IoC container. Java Singleton (GOF): One object instance per JVM.
+
+NOTE : To enable all actuator endpoint we have to use management.endpoints.web.exposure.incude=* in application.properties file
+
+NOTE: If you have added Devtools dependency in pom.xml file then any java changes you made will be picked up by the devtools but if you made any changes in pom.xml then you have to stop the server then start.
+
+NOTE :  @SpringBootApplication annotation is a combination of 3 annotations: @SpringBootConfiguration + @EnableAutoConfiguration + @ComponentScan
+
+@BeforeAll : common setup can be done for all test, it is class level method so it should be static
+
+@BeforeEach : setup for any specific test case it should not be static
+
+@AfterEach : clean for specific test
+
+@AfterAll : clean after all test run
+
+RC in here stands for release candidate that we are getting from Spring Milestones repository which is also called JFrog(repo.spring.io/milestone). (both RC and M1,M2 i.e Mile Stone version)
+
+Connecting to H2 database using spring.h2.console.enabled=true in application.properties file
+localhost:8080/h2-console. For this we have to add h2 database dependency in pom.xml file, and define its scope as runtime so that it will not be included in the jar creation. H2 database basically available at some random id that we don’t want to use so we can make it static by mentioning spring.datasource.url = jdbc:h2:mem:testdb (where tested is database name)
+In case of H2 database if we add data.sql i.e. SQL file in src/main/resource folder then it automatically got inserted in database at application startup.
+
+Spring data JPA Starter automatically detects the schema.sql file and create table in the database.
+
+When we use Spring JDBC then in that case we have to use JDBCTemplate to talk to database.
+If we want to execute any query or insert any data at the start of application then Spring provides something called CommandLineRunner.
+
+When we want to retrieve data from Spring JDBC then in that case we have to use query, if we get data for particular ID then in that case we can also use queryForObject.
+In case of retrieve data we need to map resultSet to the Bean and in that case Row Mapper helps. They map each row in the ResultSet to a specific Bean. We have to use BeanPropertyRowMapper<>(classname.class)
+
+@PersistanceContext == @Autowired
+
+Spring.jpa.show-sql=true, add it to application.properties file if you want to see the sql query generated
+
+Spring Data JPA  it says you don’t have to take care of anything I will take take of everything including EntityManager also.
+
+Spring.bbot.starter.data-jpa : it contains both JPA and hibernate 
+
+Course Update: Additional Configuration for Spring Data JPA
+Are you using >=2.5.0 Release of Spring Boot?
+
+Configure this in application.properties right now.
+* 		spring.jpa.defer-datasource-initialization=true
+
+Notes for Next Lecture - Docker and MySQL Configuration
+Launch MySQL using Docker
+* 		docker run --detach 
+* --env MYSQL_ROOT_PASSWORD=dummypassword     (Admin password)
+* --env MYSQL_USER=courses-user           (User)
+* --env MYSQL_PASSWORD=dummycourses     (User Password)
+* --env MYSQL_DATABASE=courses    
+* --name mysql 
+* --publish 3306:3306 mysql:5.7
+
+application.properties configuration for connecting to MySQL
+* 		#spring.datasource.url=jdbc:h2:mem:testdb
+* 		 
+* 		spring.jpa.hibernate.ddl-auto=update
+* 		spring.datasource.url=jdbc:mysql://localhost:3306/courses
+* 		spring.datasource.username=courses-user
+* 		spring.datasource.password=dummycourses
+* 		spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL57Dialect
+* 		 
+* 		#courses-user@localhost:3306
+* 		 
+
+mysqlsh commands
+* 		mysqlsh
+* 		\connect courses-user@localhost:3306
+* 		\sql
+* 		use courses
+* 		select * from course;
+* 		\quit
+
+Docker Commands
+* 		docker container ls
+* 		docker container stop ID
+
+
+
+
+
+

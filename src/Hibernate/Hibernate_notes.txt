@@ -1,0 +1,28 @@
+Hibernate notes:
+Hibernate -  
+It is a java framework that simplifies the development of the java application to interact with database.
+It is ORM (Object Relational Mapping) tool, Which means mapping of java application object to the database field to store the data, i.e.suppose in java application we have fields like name, roll, address etc to store that we create fields in database with same or different name.
+It is open source and lightweight.
+It is non-invasive framework, means it won’t forces the programmers to extend/implement any class/interface i.e. application is loosely coupled(held).
+Invented by Gavin king in 2001.
+
+
+Understanding ORM -
+First we have see how JDBC works, i.e. how it saves data
+In JDBC we work on relational database which has table to store the data we have a java class, when we want to save data of the class we create it’s object and then initialise it’s constructor or getter-setter and to save data in database we call JDBC API which uses JDBC Driver to save data in the database table.  
+The main issue here is that the programmer has to write the entire code/steps manually to store or save data in database. i.e. sql queries
+Hibernate Role - 
+Now instead of calling JDBC API , we call Hibernate framework to save data to the database.
+In Java application we have object to store data and perform operation.
+Here we provide object to the hibernate and it saves it automatically to the database table on our behalf. We don’t have to write code manually.
+The object is created from class and having values of class, so when we create class we map it with the table in database and the fields of class to the columns of the database. i.e. if class name is ABC it is mapped with ABC table of the database.
+And we inform hibernate through annotation or mapping that first field of class should map with first column of table in database and so on.
+
+Hibernate Project Creation :
+We create maven project—>select archetype (internal,quickstart)—>Group id(package name)—>Artifact id (project name)
+We will add dependencies in pom.xml file, dependencies can be obtained from maven repository.
+After adding dependencies save it and right click on project go to maven option and click update project, all dependencies will be download automatically. 
+
+Hibernate Configuration File :
+Hibernate is a framework which communicates with database, it store object and fetch object and provide it to us.
+So this hibernate should have information about database it is using, username, password, url, name other database properties.

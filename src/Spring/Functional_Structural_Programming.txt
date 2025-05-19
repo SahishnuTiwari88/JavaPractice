@@ -1,0 +1,53 @@
+Functional Programming vs Structural Programming
+
+Functional :-
+Mutation is not there as we don’t use any local variable here.
+Here we just inform what to do like add numbers
+
+Structural :-
+It has mutations i.e. suppose here you initialize a variable sum=0 and in next step you are adding value to it, so for each step value of sum keep on changing.  
+Here we inform what to do and how to do also. Like take value from array and add it to the previous value to get current value.
+
+Stream - Stream is just a source of object I.e. from where we are getting data and it is responsible for providing data in sequenctial manner. On stream we can have two types of operations
+1. Intermediate Operation - It takes a stream filter it or map it and the result of intermediate stream is a new stream.
+2. Terminal Operation -  It takes stream and reduces it to a single data like reduce or forEach.
+
+Class Level :-
+  Public- Applicable and can be access anywhere in same package or other
+  Private- Class cannot be private
+  
+Method Level :-  
+  Public- Can be access anywhere
+  Private- In the same class only
+  
+Final non-access modifier - (Final and static)
+Final class - When you make any class final then it cannot be extended, and in most of the cases like string, wrapper classes, classes mentioned as final ,which means we don’t allow anyone to make any modification in our code.
+NOTE- A final class cannot be extended and final method you cannot change the code (i.e. you cannot override it)
+
+Final Variable : final int i = 5; this is final variable ‘i’, it is assigned only once and its value cannot be changed.
+
+Final argument : If any argument make as final then we cannot change it’s value.
+
+Static : When you want to make a single instance only to store multiple value.
+If we don't want that variable to have a separate instance for each instance of the class. What we want to
+do is have only one instance of it.
+How can I make it one instance? That's where static comes into picture.
+If a variable is made static then it is shared among the multiple instance of the same class.
+
+
+Static Keyword Rules : 
+Private String name; //instance/ member variable it will be different for different instances /members
+Private static int count=0; //class/static variable as it is shared among all instances
+1. Inside of static method we cannot access instance variable
+2. 2) In instance method we can access both static and instance variable
+
+Enum: String don’t have restriction so someone can change it’s value at any time, If we want to put some restriction that a particular thing can store any particular value then enum comes into picture.
+other thing with enums is, you can pass them to methods, you can store them into
+instance variables.
+In enums we can say index as ordinals
+We cannot store enums into database using ordinals because if we change enum data positions then ordinals will be modified which is not a good practise.
+
+the fact that enums can have variables, enums
+can have constructors, enums
+can have methods, and we also discussed how you can assign a specific value for a enum and you can use
+this value to store it to the database.  
