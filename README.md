@@ -76,8 +76,5 @@ GitHub Profile
 
 ---
 
-<p align="center">
-  <sub>Made with ❤️ for Java learners</sub>
-</p>
-```Just paste this as your README.md in your repo root.
+  Made with ❤️ for Java learners
 
